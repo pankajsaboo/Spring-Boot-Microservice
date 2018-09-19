@@ -15,7 +15,7 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-group = 'com.configserver'
+group = 'com.discoveryserver'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
@@ -29,13 +29,8 @@ ext {
 }
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-actuator')
-	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('org.springframework.cloud:spring-cloud-config-server')
-	runtime('org.springframework.boot:spring-boot-devtools')
-	compileOnly('org.projectlombok:lombok')
+	compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-server')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-	compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
 }
 
 dependencyManagement {
